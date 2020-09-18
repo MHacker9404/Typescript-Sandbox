@@ -1,0 +1,7 @@
+{
+  "dependencies": {},
+  "name": "adjusted-project",
+  "version": "1.0.0",
+  "main": "using-ts.js",
+  "license": "MIT"
+}
