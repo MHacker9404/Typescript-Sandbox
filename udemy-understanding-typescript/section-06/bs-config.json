@@ -1,0 +1,7 @@
+{
+    "port": 8000,
+    "files": ["index.html"],
+    "ui": {
+        "port": 8001
+    }
+}
