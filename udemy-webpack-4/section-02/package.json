@@ -26,7 +26,7 @@
     "main": "index.js",
     "name": "section-02",
     "scripts": {
-        "build": "webpack --config=config/webpack.dev.js",
+        "build": "webpack --config=config/webpack.dev.cjs",
         "dev": "node src/server/main.js",
         "start": "webpack-dev-server --config=config/webpack.dev.js"
     },

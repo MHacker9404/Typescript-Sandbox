@@ -1,4 +1,6 @@
 const path = require('path');
+// import * as path from 'path';
+// import('./path').then((result) => console.log(result));
 
 module.exports = {
     entry: {
