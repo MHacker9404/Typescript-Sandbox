@@ -10,6 +10,7 @@ import {
     UsePipes,
     ValidationPipe,
     UseGuards,
+    Logger,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { GetUser } from 'src/auth/get-user.decorator';
@@ -24,6 +25,8 @@ import { TasksService } from './tasks.service';
 @Controller(`tasks`)
 @UseGuards(AuthGuard())
 export class TasksController {
+    private _logger: Logger = new Logger('TaskController');
+
     constructor(private _taskService: TasksService) {}
 
     @Get(`/:id`)

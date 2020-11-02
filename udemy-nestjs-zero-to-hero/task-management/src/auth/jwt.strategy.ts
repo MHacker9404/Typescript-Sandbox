@@ -5,12 +5,15 @@ import { JwtPayload } from './jwt-payload.intefrace';
 import { User } from './user.entity';
 import { UserRepository } from './user.repository';
 
+import config from 'config';
+const jwt: any = config.get('jwt');
+
 @Injectable()
 export class JwtStratgey extends PassportStrategy(Strategy) {
     constructor(private _userRepo: UserRepository) {
         super({
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-            secretOrKey: 'this-should-be-really-long',
+            secretOrKey: process.env.JWT_SECRET || jwt.secret,
         });
     }
 
